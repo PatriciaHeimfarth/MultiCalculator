@@ -1,8 +1,5 @@
 package de.softwarebuilding.multicalculator
 
-import android.content.Context
-import android.content.Intent
-import androidx.test.InstrumentationRegistry.getContext
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -31,9 +28,8 @@ class InstrumentedTest {
 
     @Test
     fun messageShows() {
-
-        onView(withId(R.id.test)).perform(typeText("John"))
-
+        onView(withId(R.id.weight)).perform(typeText("100"))
+        onView(withId(R.id.height)).perform(typeText("200"))
     }
 
 

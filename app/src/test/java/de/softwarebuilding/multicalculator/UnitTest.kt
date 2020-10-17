@@ -1,10 +1,9 @@
 package de.softwarebuilding.multicalculator
 
 import junit.framework.Assert.assertEquals
-import org.junit.Assert
 import org.junit.Test
 
-class BmiCalcUnitTest{
+class UnitTest{
     @Test
     fun simpleBmiCalc_isCorrect() {
         val weightInKg = 100

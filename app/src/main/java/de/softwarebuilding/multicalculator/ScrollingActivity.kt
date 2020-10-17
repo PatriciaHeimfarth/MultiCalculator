@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -43,4 +44,6 @@ class ScrollingActivity : AppCompatActivity() {
         return (weightInKg / (heightInCm / 100 * heightInCm / 100)).toDouble();
 
     }
+
+    fun calculateBmi(view: View) {}
 }
