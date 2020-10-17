@@ -37,4 +37,10 @@ class ScrollingActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    fun calculateBmi(weightInKg: Int, heightInCm: Int): Any? {
+
+        return (weightInKg / (heightInCm / 100 * heightInCm / 100)).toDouble();
+
+    }
 }
