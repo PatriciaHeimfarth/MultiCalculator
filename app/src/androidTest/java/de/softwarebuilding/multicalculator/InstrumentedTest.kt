@@ -1,8 +1,11 @@
 package de.softwarebuilding.multicalculator
 
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.typeText
+import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
@@ -30,6 +33,9 @@ class InstrumentedTest {
     fun messageShows() {
         onView(withId(R.id.weight)).perform(typeText("100"))
         onView(withId(R.id.height)).perform(typeText("200"))
+        onView(withId(R.id.BMIButton)).perform(click())
+        onView(withId(R.id.BMIResult)).check(matches(withText("25.0")));
+
     }
 
 

@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -45,5 +47,11 @@ class ScrollingActivity : AppCompatActivity() {
 
     }
 
-    fun calculateBmi(view: View) {}
+    fun calculateBmi(view: View) {
+
+        val weight = findViewById<EditText>(R.id.weight).text.toString().toInt()
+        val height = findViewById<EditText>(R.id.height).text.toString().toInt()
+        findViewById<TextView>(R.id.BMIResult).text = calculateBmi(weight, height).toString();
+
+    }
 }
